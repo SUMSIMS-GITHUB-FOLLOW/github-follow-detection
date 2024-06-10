@@ -1,5 +1,12 @@
+import { FollowButton } from '@atoms';
+import { FollowersContainer } from './styles';
+
 const index = () => {
-  return <div>팔로워 페이지 입니당</div>;
+  return (
+    <FollowersContainer>
+      <FollowButton label="Follow" />
+    </FollowersContainer>
+  );
 };
 
 export default index;
