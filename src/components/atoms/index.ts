@@ -1,3 +1,4 @@
 import Button from './Button';
+import ProfileImage from './ProfileImage';
 
-export { Button };
+export { Button, ProfileImage };
