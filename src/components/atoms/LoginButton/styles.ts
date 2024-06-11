@@ -1,22 +1,19 @@
 import styled from '@emotion/styled';
+import { Generators } from '@styles/generator';
 
 export const StyledButton = styled.button`
-  display: flex;
-  flex-shrink: 0;
-  gap: 10px;
+  ${Generators.flexGenerator()}
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   width: 30rem;
   margin: 0 auto;
-  padding: 12px 35px;
+  padding: 1.2rem 3.5rem;
 
   color: ${({ theme }) => theme.color.white};
-  font-weight: 400;
-  font-size: 18px;
-  font-style: normal;
-  line-height: normal;
+  ${Generators.fontGenerator('1.8rem', '400')}
 
-  background: #1f883d;
+  background: ${({ theme }) => theme.color.green};
   border: none;
   border-radius: 8px;
 `;
