@@ -1,11 +1,6 @@
-import { SerializedStyles } from '@emotion/react';
 import styled from '@emotion/styled';
 
-interface ButtonContainerProps {
-  customStyle?: SerializedStyles;
-}
-
-export const StyledButton = styled.button<ButtonContainerProps>`
+export const StyledButton = styled.button`
   display: flex;
   flex-shrink: 0;
   gap: 10px;
@@ -24,6 +19,4 @@ export const StyledButton = styled.button<ButtonContainerProps>`
   background: #1f883d;
   border: none;
   border-radius: 8px;
-
-  ${(props) => props.customStyle}
 `;
