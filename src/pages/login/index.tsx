@@ -1,4 +1,4 @@
-import LoginButton from '../../components/atoms/LoginButton';
+import { LoginButton } from '@atoms';
 
 const LoginPage = () => {
   const handleLoginClick = () => {
