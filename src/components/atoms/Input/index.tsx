@@ -1,13 +1,10 @@
 import React from 'react';
-import { SerializedStyles } from '@emotion/react';
 import { StyledInput } from './styles';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  customStyle?: SerializedStyles;
-}
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input = ({ customStyle, ...props }: InputProps) => {
-  return <StyledInput customStyle={customStyle} {...props} />;
+const Input = ({ ...props }: InputProps) => {
+  return <StyledInput {...props} />;
 };
 
 export default Input;

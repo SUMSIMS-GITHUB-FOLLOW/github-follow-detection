@@ -1,11 +1,6 @@
-import { SerializedStyles } from '@emotion/react';
 import styled from '@emotion/styled';
 
-interface InputContainerProps {
-  customStyle?: SerializedStyles;
-}
-
-export const StyledInput = styled.input<InputContainerProps>`
+export const StyledInput = styled.input`
   box-sizing: border-box;
   width: 30rem;
   height: 3rem;
@@ -19,6 +14,4 @@ export const StyledInput = styled.input<InputContainerProps>`
     outline: none;
     border: 0.2rem solid #0366d6;
   }
-
-  ${(props) => props.customStyle}
 `;
