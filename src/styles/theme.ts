@@ -13,6 +13,7 @@ const theme = {
     gray05: '#7B7B7B',
     gray06: '#525252',
     gray07: '#363636',
+    blue: '#0366d6',
     green: '#1f883d',
   },
 };
