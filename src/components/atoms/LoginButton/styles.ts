@@ -13,5 +13,5 @@ export const StyledButton = styled.button`
 
   background: ${({ theme }) => theme.color.green};
   border: none;
-  border-radius: 8px;
+  border-radius: 0.8rem;
 `;

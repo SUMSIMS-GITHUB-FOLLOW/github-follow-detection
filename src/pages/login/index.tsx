@@ -1,5 +1,5 @@
+import { LoginButton, SocialLogin } from '@atoms';
 import { IcGithub } from '@assets/svg';
-import { LoginButton } from '@atoms';
 import { InputText } from '@molecules';
 import { LoginPageWrapper } from './styles';
 
@@ -13,6 +13,7 @@ const LoginPage = () => {
       <IcGithub width="60" height="60" />
       <InputText label="GitHub token" />
       <LoginButton onClick={handleLoginClick}>Sign in</LoginButton>
+      <SocialLogin>Sign in with GitHub</SocialLogin>
     </LoginPageWrapper>
   );
 };
