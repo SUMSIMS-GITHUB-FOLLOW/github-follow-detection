@@ -1,4 +1,5 @@
 import { Home, Followers } from '@pages/index';
+import Login from '@pages/login';
 import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -9,6 +10,10 @@ const router = createBrowserRouter([
   {
     path: '/followers',
     element: <Followers />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
 ]);
 
