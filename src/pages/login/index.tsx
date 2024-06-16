@@ -1,3 +1,4 @@
+import { IcGithub } from '@assets/svg';
 import { LoginButton } from '@atoms';
 import { InputText } from '@molecules';
 
@@ -8,6 +9,7 @@ const LoginPage = () => {
 
   return (
     <>
+      <IcGithub />
       <InputText label="GitHub token" />
       <LoginButton onClick={handleLoginClick}>Sign in</LoginButton>
     </>

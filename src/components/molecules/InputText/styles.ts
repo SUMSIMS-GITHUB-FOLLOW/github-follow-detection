@@ -4,7 +4,7 @@ import { Generators } from '@styles/generator';
 export const InputTextWrapper = styled.section`
   ${Generators.flexGenerator('column', 'center', 'start')}
   gap: 1rem;
-  width: max-content;
+  width: fit-content;
   margin: 2rem auto;
 `;
 
