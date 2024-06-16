@@ -1,4 +1,5 @@
 import { LoginButton } from '@atoms';
+import { InputText } from '@molecules';
 
 const LoginPage = () => {
   const handleLoginClick = () => {
@@ -7,6 +8,7 @@ const LoginPage = () => {
 
   return (
     <>
+      <InputText label="GitHub token" />
       <LoginButton onClick={handleLoginClick}>Sign in</LoginButton>
     </>
   );
