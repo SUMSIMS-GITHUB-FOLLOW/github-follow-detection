@@ -1,4 +1,5 @@
-import Button from './Button';
 import ProfileImage from './ProfileImage';
+import FollowButton from './FollowButton';
+import LoginButton from './LoginButton';
 
-export { Button, ProfileImage };
+export { ProfileImage, FollowButton, LoginButton };
