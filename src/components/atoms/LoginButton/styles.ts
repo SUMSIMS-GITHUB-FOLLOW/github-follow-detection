@@ -4,8 +4,6 @@ import { Generators } from '@styles/generator';
 export const StyledButton = styled.button`
   ${Generators.flexGenerator()}
   gap: 1rem;
-  justify-content: center;
-  align-items: center;
   width: 30rem;
   margin: 0 auto;
   padding: 1.2rem 3.5rem;
