@@ -1,3 +1,4 @@
+import InputText from './InputText';
 import TextWithIcon from './TextWithIcon';
 
-export { TextWithIcon };
+export { InputText, TextWithIcon };
