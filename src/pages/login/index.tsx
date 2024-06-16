@@ -1,11 +1,21 @@
+import { useFetchUser } from '@hooks/users';
 import { LoginButton, SocialLogin } from '@atoms';
 import { IcGithub } from '@assets/svg';
 import { InputText } from '@molecules';
 import { LoginPageWrapper } from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+  const token = import.meta.env.VITE_GITHUB_TOKEN;
+  const navigate = useNavigate();
+  const { mutate: fetchUser } = useFetchUser();
+
   const handleLoginClick = () => {
-    console.log('로그인');
+    fetchUser(token, {
+      onSuccess: () => {
+        navigate('/followers');
+      },
+    });
   };
 
   return (
