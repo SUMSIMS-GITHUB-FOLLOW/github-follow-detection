@@ -1,4 +1,4 @@
-import { LoginButton } from '@atoms';
+import { LoginButton, SocialLogin } from '@atoms';
 
 const LoginPage = () => {
   const handleLoginClick = () => {
@@ -8,6 +8,7 @@ const LoginPage = () => {
   return (
     <>
       <LoginButton onClick={handleLoginClick}>Sign in</LoginButton>
+      <SocialLogin>Sign in with GitHub</SocialLogin>
     </>
   );
 };
