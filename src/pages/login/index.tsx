@@ -1,17 +1,21 @@
-import { useFetchUser, useUserStore } from '@hooks/users';
+import { useFetchUser } from '@hooks/users';
 import { LoginButton, SocialLogin } from '@atoms';
 import { IcGithub } from '@assets/svg';
 import { InputText } from '@molecules';
 import { LoginPageWrapper } from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const token = import.meta.env.VITE_GITHUB_TOKEN;
+  const navigate = useNavigate();
   const { mutate: fetchUser } = useFetchUser();
-  const user = useUserStore((state) => state.user);
 
   const handleLoginClick = () => {
-    fetchUser(token);
-    console.log(user);
+    fetchUser(token, {
+      onSuccess: () => {
+        navigate('/followers');
+      },
+    });
   };
 
   return (
