@@ -1,8 +1,14 @@
 import { LoginButton } from '@atoms';
+import { useFetchUser, useUserStore } from '@hooks/users';
 
 const LoginPage = () => {
+  const token = import.meta.env.VITE_GITHUB_TOKEN;
+  const { mutate: fetchUser } = useFetchUser();
+  const user = useUserStore((state) => state.user);
+
   const handleLoginClick = () => {
-    console.log('로그인');
+    fetchUser(token);
+    console.log(user);
   };
 
   return (

@@ -30,7 +30,8 @@
       "@styles/*": ["src/styles/*"],
       "@typings/*": ["src/typings/*"],
       "@utils/*": ["src/utils/*"],
-      "@apis/*": ["src/apis/*"]
+      "@apis/*": ["src/apis/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "include": ["src", "custom.d.ts"],
