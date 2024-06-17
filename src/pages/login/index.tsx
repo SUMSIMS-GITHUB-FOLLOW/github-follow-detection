@@ -1,4 +1,4 @@
-import { useFetchUser } from '@hooks/users';
+import { useFetchUser, useTokenStore } from '@hooks/users';
 import { LoginButton, SocialLogin } from '@atoms';
 import { IcGithub } from '@assets/svg';
 import { InputText } from '@molecules';
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { Form } from '@organisms';
 
 const LoginPage = () => {
-  const token = import.meta.env.VITE_GITHUB_TOKEN;
+  const { token } = useTokenStore();
   const navigate = useNavigate();
   const { mutate: fetchUser } = useFetchUser();
 

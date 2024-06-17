@@ -37,3 +37,8 @@ export interface UserState {
   user: User | null;
   setUser: (user: User) => void;
 }
+
+export interface TokenState {
+  token: string;
+  setToken: (token: string) => void;
+}
