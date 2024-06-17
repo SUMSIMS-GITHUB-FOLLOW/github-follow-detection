@@ -1,11 +1,11 @@
 import React from 'react';
 import { FormWrapper } from './styles';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface FormProps {
   children: React.ReactNode;
 }
 
-const Form = ({ children, ...props }: ButtonProps) => {
+const Form = ({ children, ...props }: FormProps) => {
   return <FormWrapper {...props}>{children}</FormWrapper>;
 };
 

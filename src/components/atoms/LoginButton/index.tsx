@@ -1,10 +1,7 @@
 import React from 'react';
 import { StyledButton } from './styles';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  children: React.ReactNode;
-}
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const LoginButton = ({ children, onClick = () => {}, ...props }: ButtonProps) => {
   return (
