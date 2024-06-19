@@ -1,11 +1,11 @@
 import React from 'react';
 import { SocialLoginWrapper } from './styles';
 
-interface ButtonProps {
+interface SocialLoginProps {
   children: React.ReactNode;
 }
 
-const SocialLogin = ({ children }: ButtonProps) => {
+const SocialLogin = ({ children }: SocialLoginProps) => {
   return <SocialLoginWrapper>{children}</SocialLoginWrapper>;
 };
 

@@ -1,12 +1,13 @@
-import { useFetchUser } from '@hooks/users';
+import { useFetchUser, useTokenStore } from '@hooks/users';
 import { LoginButton, SocialLogin } from '@atoms';
 import { IcGithub } from '@assets/svg';
 import { InputText } from '@molecules';
 import { LoginPageWrapper } from './styles';
 import { useNavigate } from 'react-router-dom';
+import { Form } from '@organisms';
 
 const LoginPage = () => {
-  const token = import.meta.env.VITE_GITHUB_TOKEN;
+  const { token } = useTokenStore();
   const navigate = useNavigate();
   const { mutate: fetchUser } = useFetchUser();
 
@@ -21,8 +22,10 @@ const LoginPage = () => {
   return (
     <LoginPageWrapper>
       <IcGithub width="60" height="60" />
-      <InputText label="GitHub token" />
-      <LoginButton onClick={handleLoginClick}>Sign in</LoginButton>
+      <Form>
+        <InputText label="GitHub token" />
+        <LoginButton onClick={handleLoginClick}>Sign in</LoginButton>
+      </Form>
       <SocialLogin>Sign in with GitHub</SocialLogin>
     </LoginPageWrapper>
   );

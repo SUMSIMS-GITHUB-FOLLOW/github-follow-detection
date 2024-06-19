@@ -1,4 +1,4 @@
 import { useFetchUser } from './useFetchUser';
-import { useUserStore } from './useUserStore';
+import { useUserStore, useTokenStore } from './useUserStore';
 
-export { useFetchUser, useUserStore };
+export { useFetchUser, useUserStore, useTokenStore };

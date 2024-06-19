@@ -35,5 +35,9 @@ export interface User {
 
 export interface UserState {
   user: User | null;
+  followForFollow: User[];
+  nonFollowForFollow: User[];
   setUser: (user: User) => void;
+  setFollowForFollow: (followers: User[]) => void;
+  setNonFollowForFollow: (followers: User[]) => void;
 }
