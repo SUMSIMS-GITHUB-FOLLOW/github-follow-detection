@@ -1,3 +1,4 @@
+import FollowerCard from './FollowerCard';
 import Form from './form';
 
-export { Form };
+export { FollowerCard, Form };
