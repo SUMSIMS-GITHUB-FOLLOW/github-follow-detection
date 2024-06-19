@@ -1,10 +1,10 @@
-import { FollowButton } from '@atoms';
+import { FollowerCard } from '@organisms';
 import { FollowersContainer } from './styles';
 
 const index = () => {
   return (
     <FollowersContainer>
-      <FollowButton label="Follow" />
+      <FollowerCard />
     </FollowersContainer>
   );
 };
