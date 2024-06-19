@@ -2,6 +2,7 @@ import { FollowerCard } from '@organisms';
 import { FollowersContainer, FollowerList, FollowTitle, FollowAllButton } from './styles';
 import { useTokenStore, useUserStore } from '@hooks/users/useUserStore';
 import { putUser } from '@apis/users';
+import { Profile } from '@molecules';
 
 const Index = () => {
   const { followForFollow, nonFollowForFollow } = useUserStore();
@@ -19,6 +20,7 @@ const Index = () => {
 
   return (
     <FollowersContainer>
+      <Profile />
       <FollowerList>
         <FollowTitle>맞팔인 사람</FollowTitle>
         {followForFollow.map((follower, index) => {
