@@ -34,3 +34,8 @@ export interface UserState {
   setFollowForFollow: (followers: User[]) => void;
   setNonFollowForFollow: (followers: User[]) => void;
 }
+
+export interface TokenState {
+  token: string;
+  setToken: (token: string) => void;
+}
