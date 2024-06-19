@@ -11,6 +11,12 @@ const Index = () => {
     putUser(userId, token);
   };
 
+  const handleClickFollowAll = () => {
+    nonFollowForFollow.forEach((follower) => {
+      putUser(follower.login, token);
+    });
+  };
+
   return (
     <FollowersContainer>
       <FollowerList>
@@ -28,7 +34,7 @@ const Index = () => {
       </FollowerList>
       <FollowerList>
         <FollowTitle>맞팔이 아닌 사람</FollowTitle>
-        <FollowAllButton>모두 맞팔하기</FollowAllButton>
+        <FollowAllButton onClick={handleClickFollowAll}>모두 맞팔하기</FollowAllButton>
         {nonFollowForFollow.map((follower, index) => {
           return (
             <FollowerCard

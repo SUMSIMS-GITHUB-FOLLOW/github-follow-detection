@@ -9,6 +9,7 @@ export const FollowerCardContainer = styled.section`
   padding: 2.4rem 0;
 
   background-color: ${({ theme }) => theme.color.white};
+  cursor: pointer;
 `;
 
 export const FollowerProfileContainer = styled.div`

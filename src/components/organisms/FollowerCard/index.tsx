@@ -1,7 +1,6 @@
 import { FollowButton, ProfileImage } from '@atoms';
 import { FollowerCardContainer, FollowerProfileContainer, FollowerId } from './styles';
 
-// TODO: API에 맞춰 수정 예정
 interface FollowerCardProps {
   isFollow: boolean;
   profileId: string;
@@ -9,9 +8,13 @@ interface FollowerCardProps {
   onClickFollow?: (userId: string) => void;
 }
 
-const index = ({ isFollow, profileId, profileImgSrc, onClickFollow }: FollowerCardProps) => {
+const Index = ({ isFollow, profileId, profileImgSrc, onClickFollow }: FollowerCardProps) => {
   return (
-    <FollowerCardContainer className="followerCard">
+    <FollowerCardContainer
+      className="followerCard"
+      onClick={() => {
+        window.open(`https://github.com/${profileId}`, '_blank');
+      }}>
       <FollowerProfileContainer>
         <ProfileImage src={profileImgSrc} size="small" />
         <FollowerId>{profileId}</FollowerId>
@@ -26,4 +29,4 @@ const index = ({ isFollow, profileId, profileImgSrc, onClickFollow }: FollowerCa
   );
 };
 
-export default index;
+export default Index;
