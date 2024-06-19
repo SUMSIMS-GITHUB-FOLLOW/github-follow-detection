@@ -6,7 +6,6 @@ export const FollowerCardContainer = styled.section`
   ${Generators.fontGenerator('1.2rem')};
   gap: 0.4rem;
   width: 100%;
-  height: 12rem;
   padding: 2.4rem 0;
 
   background-color: ${({ theme }) => theme.color.white};

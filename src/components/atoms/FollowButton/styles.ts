@@ -1,4 +1,13 @@
 import styled from '@emotion/styled';
+import { Generators } from '@styles/generator';
+
+export const CheckedContainer = styled.div`
+  ${Generators.flexGenerator()};
+
+  span:first-of-type {
+    color: ${({ theme }) => theme.color.green};
+  }
+`;
 
 export const ButtonContainer = styled.button`
   padding: 0.5rem 1rem;
