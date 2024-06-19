@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyledInput } from './styles';
-import { useTokenStore } from '@hooks/users';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-const Input = ({ ...props }: InputProps) => {
-  const { token, setToken } = useTokenStore();
-
-  return <StyledInput {...props} value={token} onChange={(e) => setToken(e.target.value)} />;
+const Input = ({ value, onChange, ...props }: InputProps) => {
+  return <StyledInput {...props} value={value} onChange={onChange} />;
 };
 
 export default Input;
