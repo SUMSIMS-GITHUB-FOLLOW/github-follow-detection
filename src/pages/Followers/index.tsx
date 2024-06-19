@@ -1,11 +1,15 @@
 import { FollowerCard } from '@organisms';
 import { FollowersContainer } from './styles';
+import { Profile } from '@molecules';
 
 const index = () => {
   return (
-    <FollowersContainer>
-      <FollowerCard />
-    </FollowersContainer>
+    <>
+      <Profile />
+      <FollowersContainer>
+        <FollowerCard />
+      </FollowersContainer>
+    </>
   );
 };
 
