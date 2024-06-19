@@ -18,37 +18,9 @@ export const FollowerProfileContainer = styled.div`
   height: 100%;
 `;
 
-export const FollowerProfileInfoContainer = styled.div`
-  height: 100%;
-  ${Generators.flexGenerator('column', 'space-between', 'flex-start')};
-`;
-
-export const FollowerNameWrapper = styled.div`
-  ${Generators.flexGenerator()};
-  gap: 1rem;
-`;
-
-export const FollowerName = styled.h3`
-  ${Generators.fontGenerator('1.6rem')};
-`;
-
 export const FollowerId = styled.p`
   ${Generators.fontGenerator('1.4rem')};
-  color: ${({ theme }) => theme.color.gray05};
-`;
-
-export const FollowerBio = styled.p`
-  ${Generators.fontGenerator('1.2rem')};
-  color: ${({ theme }) => theme.color.gray05};
-`;
-
-export const FollowerCompanyWrapper = styled.div`
-  ${Generators.flexGenerator()};
-  gap: 2rem;
-
-  .text {
-    color: ${({ theme }) => theme.color.gray06};
-  }
+  color: ${({ theme }) => theme.color.gray07};
 `;
 
 export const FollowerButtonContainer = styled.div``;
