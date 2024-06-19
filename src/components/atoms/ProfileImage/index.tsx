@@ -4,11 +4,25 @@ interface ProfileImageProps {
   src: string;
   alt?: string;
   size?: 'small' | 'large';
+  onClick?: () => void;
 }
 
-const index = ({ src, size = 'small', alt = 'profile-image', ...props }: ProfileImageProps) => {
+const index = ({
+  src,
+  size = 'small',
+  alt = 'profile-image',
+  onClick,
+  ...props
+}: ProfileImageProps) => {
   return (
-    <ProfileImageContainer src={src} className="profile-image" size={size} alt={alt} {...props} />
+    <ProfileImageContainer
+      src={src}
+      className="profile-image"
+      size={size}
+      alt={alt}
+      onClick={onClick}
+      {...props}
+    />
   );
 };
 

@@ -10,13 +10,15 @@ interface FollowerCardProps {
 
 const Index = ({ isFollow, profileId, profileImgSrc, onClickFollow }: FollowerCardProps) => {
   return (
-    <FollowerCardContainer
-      className="followerCard"
-      onClick={() => {
-        window.open(`https://github.com/${profileId}`, '_blank');
-      }}>
+    <FollowerCardContainer className="followerCard">
       <FollowerProfileContainer>
-        <ProfileImage src={profileImgSrc} size="small" />
+        <ProfileImage
+          src={profileImgSrc}
+          size="small"
+          onClick={() => {
+            window.open(`https://github.com/${profileId}`, '_blank');
+          }}
+        />
         <FollowerId>{profileId}</FollowerId>
       </FollowerProfileContainer>
       <FollowButton
