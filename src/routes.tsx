@@ -1,11 +1,11 @@
-import { Home, Followers } from '@pages/index';
+import { Followers } from '@pages/index';
 import Login from '@pages/login';
-import { createBrowserRouter } from 'react-router-dom';
+import { Navigate, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Navigate to="/login" replace />,
   },
   {
     path: '/followers',
